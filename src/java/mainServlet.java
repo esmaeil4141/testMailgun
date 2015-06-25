@@ -53,7 +53,7 @@ public class mainServlet extends HttpServlet {
         }else if(text==null){
             response.setStatus(415);
             setResponseResult(false, "text is null", response);
-        }else{  
+        }else{
              ClientResponse clientResponse=Mail.SendSimpleMessage(senderName, sender, receiver, subject, text);
              System.out.println(clientResponse.toString());
              response.setStatus(200);
